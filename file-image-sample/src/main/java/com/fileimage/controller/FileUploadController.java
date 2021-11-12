@@ -86,7 +86,6 @@ public class FileUploadController {
 	                .body(resource);
 	    }
 	    
-		// feed image 반환하기
 		@GetMapping(value = "/image/{imagename}", produces = MediaType.IMAGE_PNG_VALUE)
 		public ResponseEntity<byte[]> userSearch(@PathVariable("imagename") String imagename) throws IOException {
 			InputStream imageStream = new FileInputStream("/Users/SINO/Desktop/testupload/"+ imagename +".png");
